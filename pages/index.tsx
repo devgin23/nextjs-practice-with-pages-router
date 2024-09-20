@@ -2,7 +2,7 @@ import { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { getSortedPostsData } from "../lib/post";
-import homeStyles from './styles/Home.module.css';
+import homeStyles from '../styles/Home.module.css';
 
 const Home = ({allPostsData}: {
   allPostsData: {

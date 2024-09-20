@@ -1,3 +1,8 @@
+---
+title: "blahblahBlah"
+date: "2024.09.01"
+---
+
 # NextJs 주요 함수 설명
 
 작성한 사람: 이진희
