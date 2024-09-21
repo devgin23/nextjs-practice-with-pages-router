@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { getSortedPostsData } from "../lib/post";
 import homeStyles from '../styles/Home.module.css';
+import Link from "next/link";
 
 const Home = ({allPostsData}: {
   allPostsData: {
@@ -12,7 +13,10 @@ const Home = ({allPostsData}: {
   }[]
 }) => {
   return (
-    <div>
+    <div className={homeStyles.container}>
+      <Head>
+        <title>JINHEELEE</title>
+      </Head>
       <section className={homeStyles.headingMd}>
         <p>[Dev Jin Introduction]</p>
         <p>
@@ -24,7 +28,10 @@ const Home = ({allPostsData}: {
         <ul className={homeStyles.list}>
           {allPostsData.map(({id,date,title}) => (
             <li className={homeStyles.listItem} key={id}>
-              <a>{title}</a>
+              <Link href={`/posts/${id}`}>
+                {title}
+              </Link>
+              
               <br/>
               <small className={homeStyles.lightText}>
                 {date}
